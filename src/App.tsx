@@ -25,7 +25,7 @@ function App() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
 
-  const targetDate = useMemo(() => new Date('2026-05-12T00:00:00'), [])
+  const targetDate = useMemo(() => new Date('2026-05-12T12:00:00'), [])
   const [countdown, setCountdown] = useState<Countdown>(() => getCountdown(targetDate))
 
   useEffect(() => {
@@ -101,11 +101,17 @@ function App() {
         <main className="card">
           <div className="card-body">
             <span className="eyebrow">Coming soon</span>
-            <h1 className="title">The modern event registration platform.</h1>
+            <h1 className="title">Entru - A modern event registration platform.</h1>
             <p className="subtitle">
-              A single app and web experience for public and private events with flexible forms, payments,
-              approvals, and wallet passes.
+              Entru is a modern event registration and access platform built by Silent Minds. It helps
+              individuals, communities, and organizations create and manage events with flexible registration
+              flows, from frictionless RSVPs to form-based signups, paid events, approvals, and digital passes.
             </p>
+            <p className="subtitle">
+              Designed for meetups, workshops, college events, conferences, and private gatherings, Entru
+              brings everything together in a single app and web experience.
+            </p>
+            <p className="subtitle">Entru is currently preparing for a private beta.</p>
 
             <div className="countdown">
               <div>
@@ -150,15 +156,32 @@ function App() {
 
         <footer className="footer">
           <div className="footer-links">
-            <a href="#" className="link">
-              Twitter
-            </a>
             <a href="https://www.instagram.com/entru.xyz/" className="link" rel="noreferrer">
               Instagram
             </a>
-            <a href="#" className="link">
+            <a
+              href="https://www.linkedin.com/company/silent-minds/"
+              className="link"
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
+          </div>
+          <div>
+            <p>
+              Entru is a product by{' '}
+              <a href="https://silentminds.xyz" className="link" rel="noreferrer">
+                Silent Minds
+              </a>
+              .
+            </p>
+            <p>
+              Built by{' '}
+              <a href="https://jayrane.dev" className="link" rel="noreferrer">
+                Jay Rane
+              </a>
+              .
+            </p>
           </div>
           <p>Launch date: May 12, 2026</p>
         </footer>

@@ -16,7 +16,7 @@ body {
 .page {
   max-width: 760px;
   margin: 0 auto;
-  padding: 40px 20px 32px;
+  padding: 36px 20px 28px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 4px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -62,7 +64,7 @@ body {
 }
 
 .card-body {
-  padding: 40px;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -91,12 +93,12 @@ body {
 .countdown {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  padding: 16px 0 8px;
+  gap: 12px;
+  padding: 12px 0 6px;
 }
 
 .count-value {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #0f172a;
 }
@@ -112,16 +114,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
+  align-items: center;
 }
 
 .input {
   flex: 1 1 240px;
   border-radius: 14px;
   border: 1px solid rgba(148, 163, 184, 0.35);
-  padding: 14px 16px;
+  padding: 10px 14px;
   font-size: 1rem;
+  min-height: 44px;
   outline: none;
   transition: border 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 
 .input:focus {
@@ -130,7 +137,7 @@ body {
 }
 
 .button {
-  padding: 14px 20px;
+  padding: 10px 18px;
   border-radius: 14px;
   background: #0f172a;
   color: #ffffff;
@@ -138,6 +145,7 @@ body {
   border: none;
   cursor: pointer;
   transition: background 0.2s ease;
+  min-height: 44px;
 }
 
 .button:hover {
@@ -169,6 +177,7 @@ body {
 .footer-links {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .link {
@@ -183,34 +192,79 @@ body {
   color: #0f172a;
 }
 
+.page {
+  width: min(100%, 760px);
+}
+
+@media (max-width: 900px) {
+  .page {
+    max-width: 640px;
+  }
+}
+
 @media (max-width: 640px) {
   .logo {
     max-width: 150px;
   }
   .card-body {
-    padding: 28px;
+    padding: 20px;
   }
 
   .page {
-    padding: 32px 16px 28px;
+    padding: 28px 16px 24px;
   }
 
   .countdown {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
   }
-}
 
-@media (max-width: 420px) {
   .title {
-    font-size: 1.85rem;
+    font-size: clamp(1.7rem, 6vw, 2.4rem);
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
   }
 
   .count-value {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .count-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
   }
 
   .form {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input {
+    height: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    padding: 0 10px;
+    font-size: 0.9rem;
+    line-height: 32px;
+    border-radius: 10px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .pill {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+  .logo {
+    max-width: 130px;
   }
 }
