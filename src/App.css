@@ -203,37 +203,48 @@ body {
 }
 
 @media (max-width: 640px) {
+  .page {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  html {
+    font-size: 14px;
+  }
+
   .logo {
-    max-width: 150px;
+    max-width: 130px;
   }
   .card-body {
-    padding: 20px;
+    padding: 12px;
+    gap: 14px;
   }
 
   .page {
-    padding: 28px 16px 24px;
+    padding: 12px 8px 12px;
+    gap: 16px;
   }
 
   .countdown {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
   }
 
   .title {
-    font-size: clamp(1.7rem, 6vw, 2.4rem);
+    font-size: clamp(1.25rem, 4.6vw, 1.7rem);
   }
 
   .subtitle {
-    font-size: 0.95rem;
+    font-size: 0.78rem;
   }
 
   .count-value {
-    font-size: 1.25rem;
+    font-size: 0.95rem;
   }
 
   .count-label {
-    font-size: 0.6rem;
-    letter-spacing: 0.16em;
+    font-size: 0.55rem;
+    letter-spacing: 0.14em;
   }
 
   .form {
@@ -242,12 +253,12 @@ body {
   }
 
   .input {
-    height: 32px;
-    min-height: 32px;
-    max-height: 32px;
+    height: 36px;
+    min-height: 36px;
+    max-height: 36px;
     padding: 0 10px;
-    font-size: 0.9rem;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 36px;
     border-radius: 10px;
   }
 
